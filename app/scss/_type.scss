@@ -1,0 +1,90 @@
+// @font-face {
+//     font-family: 'Avenir Next';
+//     src: url('webfont.eot'); /* IE9 Compat Modes */
+//     src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//          url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
+//          url('webfont.woff') format('woff'), /* Pretty Modern Browsers */
+//          url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+//          url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+//   }
+
+@font-face {
+    font-family: "AvenirNextLTW01-Regular";
+    src: url("https://4p4d3b.media.zestyio.com/e9167238-3b3f-4813-a04a-a384394eed42.eot?#iefix");
+    src: url("https://4p4d3b.media.zestyio.com/e9167238-3b3f-4813-a04a-a384394eed42.eot?#iefix") format("eot"), url("https://4p4d3b.media.zestyio.com/1e9892c0-6927-4412-9874-1b82801ba47a.woff") format("woff"), url("https://4p4d3b.media.zestyio.com/46cf1067-688d-4aab-b0f7-bd942af6efd8.ttf") format("truetype"), url("https://4p4d3b.media.zestyio.com/52a192b1-bea5-4b48-879f-107f009b666f.svg#52a192b1-bea5-4b48-879f-107f009b666f") format("svg");
+}
+
+@font-face {
+    font-family: "AvenirNextLTW01-Medium";
+    src: url("https://4p4d3b.media.zestyio.com/1a7c9181-cd24-4943-a9d9-d033189524e0.eot?#iefix");
+    src: url("https://4p4d3b.media.zestyio.com/1a7c9181-cd24-4943-a9d9-d033189524e0.eot?#iefix") format("eot"), url("https://4p4d3b.media.zestyio.com/f26faddb-86cc-4477-a253-1e1287684336.woff") format("woff"), url("https://4p4d3b.media.zestyio.com/63a74598-733c-4d0c-bd91-b01bffcd6e69.ttf") format("truetype"), url("https://4p4d3b.media.zestyio.com/a89d6ad1-a04f-4a8f-b140-e55478dbea80.svg#a89d6ad1-a04f-4a8f-b140-e55478dbea80") format("svg");
+}
+
+@font-face {
+    font-family: "AvenirNextLTW01-DemiSC";
+    src: url("https://4p4d3b.media.zestyio.com/05bf4460-e372-4411-8bf2-c52ad078be50.eot?#iefix");
+    src: url("https://4p4d3b.media.zestyio.com/05bf4460-e372-4411-8bf2-c52ad078be50.eot?#iefix") format("eot"), url("https://4p4d3b.media.zestyio.com/809d6e38-4281-4624-8723-a9c08fda0dc0.woff") format("woff"), url("https://4p4d3b.media.zestyio.com/f9fa8229-99d5-46e0-a44b-b3635a365879.ttf") format("truetype"), url("https://4p4d3b.media.zestyio.com/6b9b78f8-e6fd-4fff-85a2-28b8091bcc58.svg#6b9b78f8-e6fd-4fff-85a2-28b8091bcc58") format("svg");
+}
+
+
+$font-stack: 'Avenir Next', 'AvenirNextLTW01-Regular', 'Arial', sans-serif;
+
+body {
+    font-family: $font-stack;
+}
+
+h1.chart-head {
+    fill: $slate-secondary-6;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+h2.chart-subhead {
+    fill: $slate-secondary-6;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+h3.chart-title {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.chart-note {
+    fill: $slate-secondary-5;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 10px;
+    width: 60%;
+    @include desktop {
+        width: 80%;
+    }
+}
+
+.chart-source, .chart-credit {
+    font-size: 9.5px;
+    line-height: 12px;
+    text-transform: uppercase;
+    color: $slate-secondary-5;
+    letter-spacing: 1px;
+    width: 65%;
+    @include desktop {
+        width: 80%;
+        font-size: 10px;
+    }
+}
+
+.chart-credit {
+    &:before {
+        content: "Graphic: ";
+    }
+}
+
+.chart-source {
+    &:before {
+        content: "Source: ";
+    }
+}

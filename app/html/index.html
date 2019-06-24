@@ -18,9 +18,20 @@
 
 <body>
   <div id='container'>
-    <section class="slide-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</section>
-    <section class="slide-item">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</section>
+    <div id="chart-area">
+        <h1 class="chart-head">This is a headline</h1>
+        <h2 class="chart-subhead">This is a subdeck or chart title. In some cases, there might be a need for a chart title also.</h2>
+        <h3 class="chart-title">This is a chart title</h3>
+        <div id="chart-container"></div>
+        <p class="chart-note">Note: Anything that needs an additional note or methodology explanation should go here.</p>
+        <p class="chart-credit">kiersten schmidt | grow</p>
+        <p class="chart-source">this is the source</p>
+        <img src="img/grow_logo.png" class="grow-logo">
+    </div>
+    
   </div>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <!-- <script src="http://code.highcharts.com/modules/exporting.js"></script> -->
   <!--build:js js/main.min.js -->
   <script src="js/main.js"></script>
   <!-- endbuild -->

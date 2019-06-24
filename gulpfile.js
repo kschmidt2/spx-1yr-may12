@@ -22,6 +22,7 @@ const
   mqpacker = require('css-mqpacker'),
   cssnano = require('cssnano'),
   browsersync = require('browser-sync').create(),
+  babel = require('gulp-babel')
 
   // folders
   app = 'app/',
@@ -66,17 +67,29 @@ function html() {
 exports.html = gulp.series(images, html);
 
 // JavaScript processing
+// function js() {
+
+//   return gulp.src(app + 'js/**/*')
+//     .pipe(sourcemaps ? sourcemaps.init() : noop())
+//     .pipe(deporder())
+//     .pipe(concat('main.js'))
+//     .pipe(stripdebug ? stripdebug() : noop())
+//     .pipe(terser())
+//     .pipe(sourcemaps ? sourcemaps.write() : noop())
+//     .pipe(gulp.dest(dist + 'js/'))
+//     .pipe(browsersync.stream());
+
+// }
+// exports.js = js;
+
 function js() {
 
   return gulp.src(app + 'js/**/*')
-    .pipe(sourcemaps ? sourcemaps.init() : noop())
-    .pipe(deporder())
-    .pipe(concat('main.js'))
-    .pipe(stripdebug ? stripdebug() : noop())
-    .pipe(terser())
-    .pipe(sourcemaps ? sourcemaps.write() : noop())
-    .pipe(gulp.dest(dist + 'js/'))
-    .pipe(browsersync.stream());
+  .pipe(babel({
+      presets: ['@babel/env']
+  }))
+  .pipe(gulp.dest(dist + 'js/'))
+  .pipe(browsersync.stream());
 
 }
 exports.js = js;

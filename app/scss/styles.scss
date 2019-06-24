@@ -1,55 +1,65 @@
+$breakpoint-small: 565px;
+
+@mixin mobile {
+  @media (min-width: #{$breakpoint-small}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-small + 1px}) {
+    @content;
+  }
+}
+
 @import "css-reset";
-
-// colors
-$background: #011a27;
-$main: #fff;
-$secondary: #4cb5f5;
-$highlight: #f62a00;
-$font-family: 'Lato', sans-serif;
-
-.testing {
-  height: 500px;
-  width: percentage(5/7);
-}
-
-body {
-  background-color: $background;
-  color: $main;
-  font-family: $font-family;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 1.7;
-}
-
-.highlight {
-  font-weight: 700;
-  color: $highlight;
-  letter-spacing: 0.3px;
-}
+@import "colors";
+@import "type";
+@import "highcharts";
 
 a {
-  border-bottom: 1px solid $secondary;
-  color: $secondary;
+  border-bottom: 1px solid $green-primary;
+  color: $green-primary;
   text-decoration: none;
 }
 
 #container {
   width: 90%;
-  max-width: 600px;
+  max-width: 833px;
   margin: auto;
   padding: 5%;
 }
 
-.slide-item {
-  min-height: 200px;
-  margin-bottom: 60vh;
+#chart-container {
+  width: 100%;
+  height: 300px;
+  // set this only if there is a chart title
+  margin-top: 10px;
+  @include desktop {
+    height: 400px;
+    margin-top: -23px;
+  }
 }
 
-.sticky-outer {
-    position: absolute;
-    height: calc(100% + 1000vh);
-    width: 100%;
-    top: 0vh;
-    left: 0;
-    z-index: -1;
+#chart-area {
+  // background-color: lightgray;
+  background-size: 100px;
+  background-repeat: no-repeat;
+  background-image:
+    url(/img/grow_leaves.png);
+  background-position: bottom right;
 }
+
+.grow-logo {
+  width: 214px;
+  margin-top: 20px;
+  margin-bottom: -7px;
+}
+
+.grow-leaves {
+  float: right;
+  width: 12%;
+  margin-top: -38px;
+  position: relative;
+}
+

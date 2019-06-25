@@ -92,4 +92,8 @@ h3.chart-title {
     &:before {
         content: "Source: ";
     }
+    float: left;
+    @include desktop {
+        float: none;
+      }
 }

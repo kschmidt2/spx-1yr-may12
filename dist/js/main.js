@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     chart: {
       type: 'bar',
       styledMode: true,
-      spacingBottom: 35,
+      spacingBottom: 25,
       spacingRight: 100
     },
     title: {

@@ -54,7 +54,7 @@ h3.chart-title {
     margin-bottom: 20px;
     @include desktop {
         // set this only if there is a chart title + legend
-        margin-top: -23px;
+        margin-bottom: -23px;
     }
 }
 

@@ -23,7 +23,7 @@ h3.chart-title {
     text-transform: uppercase;
     font-size: 14px;
     margin-bottom: 20px;
-    @include desktop {
+    @include small-md-xl {
         // set this only if there is a chart title + legend
         margin-bottom: -23px;
     }
@@ -35,7 +35,7 @@ h3.chart-title {
     line-height: 18px;
     margin-bottom: 10px;
     width: 60%;
-    @include desktop {
+    @include small-md-xl {
         width: 80%;
     }
 }
@@ -47,7 +47,7 @@ h3.chart-title {
     color: $slate-secondary-5;
     letter-spacing: 1px;
     width: 65%;
-    @include desktop {
+    @include small-md-xl {
         width: 80%;
         font-size: 10px;
     }
@@ -64,7 +64,7 @@ h3.chart-title {
         content: "Source: ";
     }
     float: left;
-    @include desktop {
+    @include small-md-xl {
         float: none;
       } 
 }

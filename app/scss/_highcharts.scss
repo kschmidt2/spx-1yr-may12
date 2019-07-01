@@ -264,7 +264,7 @@
   }
   
   .highcharts-point {
-    stroke-width: 1px;
+    stroke-width: 0;
   }
   
   .highcharts-dense-data .highcharts-point {
@@ -301,7 +301,7 @@
   }
   
   .highcharts-column-series rect.highcharts-point {
-    stroke: #ffffff;
+    stroke-width: 0;
   }
   
   .highcharts-column-series .highcharts-point {

@@ -16,14 +16,16 @@ h2.chart-subhead {
     font-size: 16px;
     line-height: 20px;
     margin-bottom: 20px;
+    max-width: 500px;
 }
 
 h3.chart-title {
     font-weight: 600;
     text-transform: uppercase;
     font-size: 14px;
+    // bottom margin should be 30px if there is no legend
     margin-bottom: 20px;
-    @include small-md-xl {
+    @include sm-md-xl {
         // set this only if there is a chart title + legend
         margin-bottom: -23px;
     }
@@ -34,8 +36,8 @@ h3.chart-title {
     font-size: 14px;
     line-height: 18px;
     margin-bottom: 10px;
-    width: 60%;
-    @include small-md-xl {
+    width: 70%;
+    @include sm-md-xl {
         width: 80%;
     }
 }
@@ -47,7 +49,7 @@ h3.chart-title {
     color: $slate-secondary-5;
     letter-spacing: 1px;
     width: 65%;
-    @include small-md-xl {
+    @include sm-md-xl {
         width: 80%;
         font-size: 10px;
     }
@@ -57,6 +59,9 @@ h3.chart-title {
     &:before {
         content: "Graphic: ";
     }
+    @include sm-md-xl {
+        padding-right: 10px;
+    }
 }
 
 .chart-source {
@@ -64,7 +69,7 @@ h3.chart-title {
         content: "Source: ";
     }
     float: left;
-    @include small-md-xl {
+    @include sm-md-xl {
         float: none;
       } 
 }

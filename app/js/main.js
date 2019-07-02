@@ -4,6 +4,12 @@
 
 // console.log(Highcharts);
 
+Highcharts.setOptions({
+    lang: {
+      thousandsSep: ','
+    }
+});
+
 
 document.addEventListener('DOMContentLoaded', function () {
     const myChart = Highcharts.chart('chart-container', {

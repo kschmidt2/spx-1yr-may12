@@ -1,75 +1,75 @@
 $font-stack: 'Avenir', 'Avenir Next', 'Arial', sans-serif;
 
-body {
+.chart-area {
     font-family: $font-stack;
-}
 
-h1.chart-head {
-    fill: $slate-secondary-6;
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-h2.chart-subhead {
-    fill: $slate-secondary-6;
-    font-size: 16px;
-    line-height: 20px;
-    margin-bottom: 20px;
-    max-width: 600px;
-}
-
-h3.chart-title {
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 14px;
-    // bottom margin should be 30px if there is no legend
-    margin-bottom: 20px;
-    @include sm-md-xl {
-        // set this only if there is a chart title + legend
-        margin-bottom: -23px;
+    & .chart-head {
+        fill: $slate-secondary-6;
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 10px;
     }
-}
 
-.chart-note {
-    fill: $slate-secondary-5;
-    font-size: 14px;
-    line-height: 18px;
-    margin-bottom: 10px;
-    width: 70%;
-    @include sm-md-xl {
-        width: 80%;
+    & .chart-subhead {
+        fill: $slate-secondary-6;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 20px;
+        max-width: 600px;
     }
-}
 
-.chart-source, .chart-credit {
-    font-size: 9.5px;
-    line-height: 12px;
-    text-transform: uppercase;
-    color: $slate-secondary-5;
-    letter-spacing: 1px;
-    width: 65%;
-    @include sm-md-xl {
-        width: 80%;
-        font-size: 10px;
+    & .chart-title {
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 14px;
+        // bottom margin should be 30px if there is no legend
+        margin-bottom: 20px;
+        @include sm-md-xl {
+            // set this only if there is a chart title + legend
+            margin-bottom: -23px;
+        }
     }
-}
 
-.chart-credit {
-    &:before {
-        content: "Graphic: ";
+    & .chart-note {
+        fill: $slate-secondary-5;
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 10px;
+        width: 70%;
+        @include sm-md-xl {
+            width: 80%;
+        }
     }
-    @include sm-md-xl {
-        padding-right: 10px;
-    }
-}
 
-.chart-source {
-    &:before {
-        content: "Source: ";
+    & .chart-source, .chart-credit {
+        font-size: 9.5px;
+        line-height: 12px;
+        text-transform: uppercase;
+        color: $slate-secondary-5;
+        letter-spacing: 1px;
+        width: 65%;
+        @include sm-md-xl {
+            width: 80%;
+            font-size: 10px;
+        }
     }
-    float: left;
-    @include sm-md-xl {
-        float: none;
-      } 
+
+    & .chart-credit {
+        &:before {
+            content: "Graphic: ";
+        }
+        @include sm-md-xl {
+            padding-right: 10px;
+        }
+    }
+
+    & .chart-source {
+        &:before {
+            content: "Source: ";
+        }
+        float: left;
+        @include sm-md-xl {
+            float: none;
+          } 
+    }
 }

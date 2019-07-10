@@ -25,38 +25,32 @@ $breakpoint-lg: 717px;
 @import "type";
 @import "highcharts";
 
-a {
-  border-bottom: 1px solid $green-primary;
-  color: $green-primary;
-  text-decoration: none;
-}
-
-#container {
-  width: 100%;
-  margin: auto;
-  padding: 0;
-}
-
-#chart-container {
-  width: 100%;
-  height: 300px;
-  margin-top: -10px;
-  @include sm-md-xl {
-    height: 400px;
-  }
-}
-
-#chart-area {
+.chart-area {
   // background-color: lightgray;
   background-size: 100px;
   background-repeat: no-repeat;
   background-image:
     url(https://fm-static.cnbc.com/awsmedia/chart/2019/6/10/grow_leaves.1562793463706.png);
   background-position: bottom right;
-}
 
-.grow-logo {
-  width: 214px;
-  margin-top: 20px;
-}
+  & a {
+    border-bottom: 1px solid $green-primary;
+    color: $green-primary;
+    text-decoration: none;
+  }
 
+  & #chart-container {
+    width: 100%;
+    height: 300px;
+    margin-top: -10px;
+    @include sm-md-xl {
+      height: 400px;
+    }
+  }
+
+  & .grow-logo {
+    width: 214px;
+    margin-top: 20px;
+  }
+  
+}

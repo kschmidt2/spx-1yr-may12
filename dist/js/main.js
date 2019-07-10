@@ -4,6 +4,11 @@
 // import Exporting from 'highcharts/modules/exporting';
 // Exporting(Highcharts);
 // console.log(Highcharts);
+Highcharts.setOptions({
+  lang: {
+    thousandsSep: ','
+  }
+});
 document.addEventListener('DOMContentLoaded', function () {
   var myChart = Highcharts.chart('chart-container', {
     chart: {
@@ -15,6 +20,9 @@ document.addEventListener('DOMContentLoaded', function () {
     title: {
       text: null
     },
+    data: {
+      googleSpreadsheetKey: '1YOKb5l2VM4aAB2r20N_1aT_1vEajYrP3U-U3A6lZbC0'
+    },
     legend: {
       align: 'right',
       symbolRadius: 0,
@@ -23,7 +31,11 @@ document.addEventListener('DOMContentLoaded', function () {
       itemMarginTop: -10
     },
     xAxis: {
-      categories: ['Apples', 'Bananas', 'Oranges']
+      labels: {
+        style: {
+          whiteSpace: 'nowrap'
+        }
+      }
     },
     yAxis: {
       title: false,
@@ -57,13 +69,6 @@ document.addEventListener('DOMContentLoaded', function () {
           }
         }
       }]
-    },
-    series: [{
-      name: 'Jane',
-      data: [1, 6, 4]
-    }, {
-      name: 'John',
-      data: [5, 7, 3]
-    }]
+    }
   });
 });

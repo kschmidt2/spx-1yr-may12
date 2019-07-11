@@ -1,9 +1,5 @@
 "use strict";
 
-// import Highcharts from 'highcharts';
-// import Exporting from 'highcharts/modules/exporting';
-// Exporting(Highcharts);
-// console.log(Highcharts);
 Highcharts.setOptions({
   lang: {
     thousandsSep: ','

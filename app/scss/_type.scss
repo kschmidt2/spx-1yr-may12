@@ -72,4 +72,17 @@ $font-stack: 'Avenir', 'Avenir Next', 'Arial', sans-serif;
             float: none;
           } 
     }
+
+    & .highcharts-annotation-label {
+        font-size: 14px;
+        line-height: 18px;
+        fill: $slate-secondary-5;
+        & span {
+            background-color: white;
+            padding: 0 5px;
+            @include x-small {
+                background-color: rgba(#fff, .6)
+            }
+        }
+    }
 }

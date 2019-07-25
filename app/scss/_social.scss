@@ -1,0 +1,74 @@
+.social {
+    &.chart-area {
+        max-width: none;
+        width: 1012px;
+        height: 506px;
+        padding: 20px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-image:
+          url(https://fm-static.cnbc.com/awsmedia/chart/2019/6/25/social_graphic-01.1564070685488.png);
+        background-position: top left;
+    }
+    & .chart-head, & .chart-subhead, & .chart-title, & .chart-credit, & .grow-logo {
+        display: none;
+    }
+    & .chart-title-social {
+        display: block;
+        margin-left: 30px;
+        font-size: 28px;
+        margin-bottom: -46px !important;
+    }
+    & .chart-container {
+        min-height: 520px;
+        margin-left: 10px;
+        width: 80%;
+    }
+    & .chart-note, & .chart-source  {
+        color: $slate-secondary-6;
+        font-size: 16px !important;
+        line-height: 20px;
+        text-transform: uppercase;
+        letter-spacing: normal;
+        font-weight: 600;
+        margin-top: -270px;
+        margin-right: 80px;
+        @include sm-md-xl {
+            width: 160px;
+            float: right;
+        }
+    }
+    & .chart-source {
+        margin-top: -140px;
+    }
+    & .grow-logo-social {
+        display: block;
+        float: right;
+        margin-top: -80px;
+        margin-right: 80px;
+        width: 160px;
+    }
+    & .highcharts-grid-line {
+        stroke: white;
+    }
+    & .highcharts-axis-labels, & .highcharts-legend-item {
+        font-weight: 500;
+        font-size: 24px;
+        & text {
+            font-size: 24px;
+        }
+    }
+    & .highcharts-legend-item {
+        & text {
+            transform: translate(5px,0);
+        }
+    }
+    & .highcharts-color-0 {
+        fill: white;
+        stroke: white;
+      }  
+    & .highcharts-color-1 {
+        fill: $slate-secondary-3;
+        stroke: $slate-secondary-3;
+    }
+}

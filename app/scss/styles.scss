@@ -40,6 +40,10 @@ $breakpoint-lg: 717px;
     text-decoration: none;
   }
 
+  & .chart-title-social, & .grow-logo-social {
+    display: none;
+  }
+
   & .chart-container {
     width: 100%;
     height: 300px;
@@ -55,3 +59,5 @@ $breakpoint-lg: 717px;
   }
   
 }
+
+@import "social";

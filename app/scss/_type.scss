@@ -18,7 +18,7 @@ $font-stack: 'Avenir', 'Avenir Next', 'Arial', sans-serif;
         max-width: 600px;
     }
 
-    & .chart-title {
+    & .chart-title, & .chart-title-social {
         font-weight: 600;
         text-transform: uppercase;
         font-size: 14px;

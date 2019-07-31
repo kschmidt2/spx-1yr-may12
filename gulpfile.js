@@ -66,30 +66,17 @@ function html() {
 }
 exports.html = gulp.series(images, html);
 
-// JavaScript processing
-// function js() {
-
-//   return gulp.src(app + 'js/**/*')
-//     .pipe(sourcemaps ? sourcemaps.init() : noop())
-//     .pipe(deporder())
-//     .pipe(concat('main.js'))
-//     .pipe(stripdebug ? stripdebug() : noop())
-//     .pipe(terser())
-//     .pipe(sourcemaps ? sourcemaps.write() : noop())
-//     .pipe(gulp.dest(dist + 'js/'))
-//     .pipe(browsersync.stream());
-
-// }
-// exports.js = js;
-
+// JS processing
 function js() {
-
+  
   return gulp.src(app + 'js/**/*')
-  .pipe(babel({
-      presets: ['@babel/env']
-  }))
-  .pipe(gulp.dest(dist + 'js/'))
-  .pipe(browsersync.stream());
+  .pipe(sourcemaps ? sourcemaps.init() : noop())
+  .pipe(deporder())
+  .pipe(concat('main.js'))
+  .pipe(stripdebug ? stripdebug() : noop())
+  .pipe(terser())
+  .pipe(sourcemaps ? sourcemaps.write() : noop())
+  .pipe(gulp.dest(dist + 'js/'));
 
 }
 exports.js = js;
@@ -191,7 +178,7 @@ exports.default = gulp.series(exports.build, exports.watch);
 //   gulp.watch('app/js/**/*.js', browserSync.reload);
 // });
 
-// // minifies js and css
+// minifies js and css
 // gulp.task('useref', function(){
 //   return gulp.src('app/*.html')
 //     .pipe(useref())

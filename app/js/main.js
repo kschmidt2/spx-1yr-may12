@@ -38,7 +38,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 style: {
                     whiteSpace: 'nowrap'
                 }
-            }
+            },
+            tickLength: 5
         },
         yAxis: {
             title: false,

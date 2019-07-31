@@ -68,15 +68,15 @@ exports.html = gulp.series(images, html);
 
 // JS processing
 function js() {
-  
+
   return gulp.src(app + 'js/**/*')
-  .pipe(sourcemaps ? sourcemaps.init() : noop())
-  .pipe(deporder())
-  .pipe(concat('main.js'))
-  .pipe(stripdebug ? stripdebug() : noop())
-  .pipe(terser())
-  .pipe(sourcemaps ? sourcemaps.write() : noop())
-  .pipe(gulp.dest(dist + 'js/'));
+    .pipe(sourcemaps ? sourcemaps.init() : noop())
+    .pipe(deporder())
+    .pipe(concat('main.js'))
+    .pipe(stripdebug ? stripdebug() : noop())
+    .pipe(terser())
+    .pipe(sourcemaps ? sourcemaps.write() : noop())
+    .pipe(gulp.dest(dist + 'js/'));
 
 }
 exports.js = js;

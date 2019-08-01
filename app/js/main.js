@@ -5,6 +5,14 @@
 //     element[i].className += " social";
 // }
 
+let subhead = document.getElementsByClassName("chart-subhead"),
+    headline = document.getElementById("chart-head");
+    if (!headline) {
+        for(var i = 0; i < subhead.length; i++) {
+            subhead[i].className += " strong";
+        }       
+     }
+
 Highcharts.setOptions({
     lang: {
       thousandsSep: ','

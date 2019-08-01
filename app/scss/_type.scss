@@ -73,6 +73,10 @@ $font-stack: 'Avenir', 'Avenir Next', 'Arial', sans-serif;
           } 
     }
 
+    & .strong {
+        font-weight: 600;
+    }
+
     & .highcharts-annotation-label {
         font-size: 14px;
         line-height: 18px;

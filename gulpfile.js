@@ -5,7 +5,6 @@ const
   devBuild = (process.env.NODE_ENV !== 'production'),
 
   // modules
-  log = require('fancy-log'),
   gulp = require('gulp'),
   noop = require('gulp-noop'),
   newer = require('gulp-newer'),
@@ -109,6 +108,7 @@ function css() {
       cssnano
     ]))
     .pipe(sourcemaps ? sourcemaps.write() : noop())
+    .pipe(rename(projectName + '_styles.css'))
     .pipe(gulp.dest(dist + 'css/'))
     .pipe(browsersync.stream());
 

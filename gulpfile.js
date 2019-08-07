@@ -22,12 +22,15 @@ const
   mqpacker = require('css-mqpacker'),
   cssnano = require('cssnano'),
   browsersync = require('browser-sync').create(),
-  babel = require('gulp-babel')
 
   // folders
   app = 'app/',
-  dist = 'dist/'
+  dist = 'dist/',
+
+  projectName = './app'
   ;
+
+  console.log(projectName);
 
 // BrowserSync
 function browserSync(done) {
@@ -81,6 +84,7 @@ function js() {
 }
 exports.js = js;
 
+
 // CSS processing
 function css() {
 
@@ -117,11 +121,11 @@ function watch(done) {
   // html changes
   gulp.watch(app + 'html/**/*', html);
 
-  // css changes
-  gulp.watch(app + 'scss/**/*', css);
-
   // js changes
   gulp.watch(app + 'js/**/*', js);
+
+  // css changes
+  gulp.watch(app + 'scss/**/*', css);
 
   done();
 

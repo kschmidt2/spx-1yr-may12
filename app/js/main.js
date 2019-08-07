@@ -5,11 +5,12 @@
 //     element[i].className += " social";
 // }
 
+// bolds the subhead if there is no headline
 let subhead = document.getElementsByClassName("chart-subhead"),
     headline = document.getElementById("chart-head");
     if (!headline) {
         for(var i = 0; i < subhead.length; i++) {
-            subhead[i].className += " strong";
+            subhead.className += " strong";
         }       
      }
 
@@ -33,6 +34,12 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         data: {
             googleSpreadsheetKey: '1YOKb5l2VM4aAB2r20N_1aT_1vEajYrP3U-U3A6lZbC0'
+        },
+        // for bar charts only
+        plotOptions: {
+            series: {
+                groupPadding: 0.1
+            } 
         },
         legend: {
             align: 'right',

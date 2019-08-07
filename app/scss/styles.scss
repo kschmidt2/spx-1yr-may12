@@ -22,17 +22,19 @@ $breakpoint-lg: 717px;
 
 @import "css-reset";
 @import "colors";
-@import "type";
-@import "highcharts";
 
 .chart-area {
-  // background-color: lightgray;
+  @import "type";
+  @import "highcharts";
+
   background-size: 100px;
   background-repeat: no-repeat;
   background-image:
     url(https://fm-static.cnbc.com/awsmedia/chart/2019/6/10/grow_leaves.1562793463706.png);
   background-position: bottom right;
   max-width: 660px;
+  margin-bottom: 25px;
+  font-family: $font-stack;
 
   & a {
     border-bottom: 1px solid $green-primary;

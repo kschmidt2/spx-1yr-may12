@@ -5,6 +5,7 @@ const
   devBuild = (process.env.NODE_ENV !== 'production'),
 
   // modules
+  log = require('fancy-log'),
   gulp = require('gulp'),
   noop = require('gulp-noop'),
   newer = require('gulp-newer'),
@@ -22,15 +23,19 @@ const
   mqpacker = require('css-mqpacker'),
   cssnano = require('cssnano'),
   browsersync = require('browser-sync').create(),
+  rename = require('gulp-rename'),
 
   // folders
   app = 'app/',
-  dist = 'dist/',
+  dist = 'dist/';
 
-  projectName = './app'
-  ;
-
-  console.log(projectName);
+  // gets name of project folder by getting the path,
+  // turning it into a string, splitting that string into an array,
+  // and getting the last item out of the array
+  const projectPath = process.cwd();
+  JSON.stringify(projectPath);
+  const projectFolder = projectPath.split('/');
+  const projectName = projectFolder.pop();
 
 // BrowserSync
 function browserSync(done) {
@@ -79,6 +84,7 @@ function js() {
     .pipe(stripdebug ? stripdebug() : noop())
     .pipe(terser())
     .pipe(sourcemaps ? sourcemaps.write() : noop())
+    .pipe(rename(projectName + '_main.js'))
     .pipe(gulp.dest(dist + 'js/'))
     .pipe(browsersync.stream());
 }

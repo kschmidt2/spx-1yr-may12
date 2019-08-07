@@ -24,7 +24,10 @@
   "homepage": "https://github.com/kschmidt2/cover-letter#readme",
   "dependencies": {
     "bootstrap": "^4.1.3",
+    "fancy-log": "^1.3.3",
+    "fs": "0.0.1-security",
     "gulp-cssnano": "^2.1.3",
+    "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "highcharts": "^7.1.2",
     "requirejs": "^2.3.6"

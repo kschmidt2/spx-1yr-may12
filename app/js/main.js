@@ -20,7 +20,6 @@ Highcharts.setOptions({
     }
 });
 
-
 document.addEventListener('DOMContentLoaded', function () {
     const myChart = Highcharts.chart('chart-container', {
         chart: {

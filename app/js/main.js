@@ -10,7 +10,7 @@ let subhead = document.getElementsByClassName("chart-subhead"),
     headline = document.getElementById("chart-head");
     if (!headline) {
         for(var i = 0; i < subhead.length; i++) {
-            subhead.className += " strong";
+            subhead[i].style.fontWeight = "600";
         }       
      }
 

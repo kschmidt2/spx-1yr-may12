@@ -40,6 +40,23 @@ document.addEventListener('DOMContentLoaded', function () {
                 groupPadding: 0.1
             } 
         },
+        // for line charts only
+        // plotOptions: {
+        //     series: {
+        //         lineWidth: 1,
+        //         // clip: false,
+        //         marker: {
+        //             enabled: false,
+        //             symbol: 'circle',
+        //             fillColor: '#ffffff',
+        //             states: {
+        //                 hover: {
+        //                     fillColor: '#ffffff'
+        //                 }
+        //             }
+        //         }
+        //     }
+        // },
         legend: {
             align: 'right',
             symbolRadius: 0,

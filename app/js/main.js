@@ -25,7 +25,7 @@ let chartId = document.getElementById("chart-container");
 // checks for the chart ID and displays a backup image if the browser can't find it
 setTimeout(function() {
     if(chartId.innerHTML === "") {
-        console.log('noId');
+        // console.log('noId');
         let chartArea = document.getElementsByClassName("chart-area");
         for(var i = 0; i < chartArea.length; i++) {
             chartArea[i].style.display = "none";
@@ -33,7 +33,7 @@ setTimeout(function() {
         // insert chart screenshot here
         document.getElementById("chart-fallback").innerHTML += '<img src="https://fm-static.cnbc.com/awsmedia/chart/2019/10/08/chart-error_wide.1570569331252.png" style="width: 100%;max-width:660px">';
     } else {
-        console.log('yesId')
+        // console.log('yesId')
     }
 },1500);
 

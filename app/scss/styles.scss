@@ -27,6 +27,8 @@ $breakpoint-lg: 717px;
   @import "type";
   @import "highcharts";
 
+  box-sizing: border-box;
+
   background-size: 100px;
   background-repeat: no-repeat;
   background-image:

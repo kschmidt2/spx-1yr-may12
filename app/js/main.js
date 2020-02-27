@@ -3,6 +3,13 @@
 // for(var i = 0; i < element.length; i++)
 // {
 //     element[i].className += " social";
+// }\
+
+// adds social-square class to get square social chart
+// let element = document.getElementsByClassName("chart-area");
+// for(var i = 0; i < element.length; i++)
+// {
+//     element[i].className += " social-square";
 // }
 
 // bolds the subhead if there is no headline

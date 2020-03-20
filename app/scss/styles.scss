@@ -20,7 +20,6 @@ $breakpoint-lg: 717px;
   }
 }
 
-@import "css-reset";
 @import "colors";
 
 .chart-area {
@@ -64,5 +63,5 @@ $breakpoint-lg: 717px;
   
 }
 
-@import "social";
-@import "social-square";
+// @import "social";
+// @import "social-square";

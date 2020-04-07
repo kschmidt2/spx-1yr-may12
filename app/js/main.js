@@ -42,7 +42,7 @@ function drawHighcharts() {
             styledMode: true,
             spacingBottom: 25,
             spacingRight: 100,
-            spacingLeft: 0
+            spacingLeft: 0,
         }, 
         title: {
             text: null

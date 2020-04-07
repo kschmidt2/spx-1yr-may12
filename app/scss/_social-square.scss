@@ -1,13 +1,17 @@
-.social-square {
+.social {
     &.chart-area {
         max-width: none;
-        width: 1080px;
+        width: 2160px;
         height: 1080px;
-        padding: 70px 40px;
+        // padding for square
+        // padding: 80px 600px;
+        // padding for 1012x506 rectangle
+        padding: 80px 300px;
+        margin: 20px;
         background-size: 100%;
         background-repeat: no-repeat;
         background-image:
-          url(https://fm.cnbc.com/applications/cnbc.com/resources/files/2020/02/27/social-square-graphic-bg-01.png);
+          url(https://fm.cnbc.com/applications/cnbc.com/resources/files/2020/04/07/social-background.png);
         background-position: top left;
     }
     & .chart-head, & .chart-subhead, & .chart-title, & .chart-credit, & .grow-logo {
@@ -23,10 +27,9 @@
         text-align: center;
     }
     & .chart-container {
-        height: 700px !important;
+        height: 640px !important;
         width: 100%;
-        margin-left: 30px;
-        margin-bottom: 20px;
+        margin-bottom: 60px;
     }
     & .chart-note, & .chart-source  {
         color: $slate-secondary-6;
@@ -36,7 +39,7 @@
         letter-spacing: normal;
         font-weight: 500;
         margin-right: 80px;
-        margin-left: 30px;
+        margin-left: 0px;
         width: 60% !important;
     }
     & .chart-source {
@@ -46,7 +49,7 @@
         display: block;
         float: right;
         margin-top: -60px;
-        margin-right: 60px;
+        margin-right: 0px;
         width: 214px;
     }
     & .highcharts-grid-line {
@@ -76,4 +79,10 @@
     & .highcharts-tracker-line {
         stroke-width: 8;
       }
+    & .highcharts-axis-line {
+        stroke-width: 3;
+    }
+    & .highcharts-series-group {
+        transform: translate(1.5px,0)
+    }
 }

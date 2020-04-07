@@ -3,14 +3,8 @@
 // for(var i = 0; i < element.length; i++)
 // {
 //     element[i].className += " social";
-// }\
-
-// adds social-square class to get square social chart
-// let element = document.getElementsByClassName("chart-area");
-// for(var i = 0; i < element.length; i++)
-// {
-//     element[i].className += " social-square";
 // }
+
 
 Highcharts.setOptions({
     lang: {
@@ -43,6 +37,7 @@ function drawHighcharts() {
             spacingBottom: 25,
             spacingRight: 100,
             spacingLeft: 0,
+            spacingTop: 20
         }, 
         title: {
             text: null
@@ -74,11 +69,7 @@ function drawHighcharts() {
         //     }
         // },
         legend: {
-            align: 'right',
-            symbolRadius: 0,
-            verticalAlign: 'top',
-            x: 10,
-            itemMarginTop: -10
+            enabled: false
         },
         xAxis: {
             labels: {

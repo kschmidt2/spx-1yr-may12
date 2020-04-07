@@ -1,13 +1,17 @@
 .social {
     &.chart-area {
         max-width: none;
-        width: 1012px;
-        height: 506px;
-        padding: 20px;
+        width: 2160px;
+        height: 1080px;
+        // padding for square
+        // padding: 80px 600px;
+        // padding for 1012x506 rectangle
+        padding: 80px 300px;
+        margin: 20px;
         background-size: 100%;
         background-repeat: no-repeat;
         background-image:
-          url(https://fm.cnbc.com/applications/cnbc.com/resources/files/2020/02/27/twitter-graphic-bg-02.png);
+          url(https://fm.cnbc.com/applications/cnbc.com/resources/files/2020/04/07/social-background.png);
         background-position: top left;
     }
     & .chart-head, & .chart-subhead, & .chart-title, & .chart-credit, & .grow-logo {
@@ -15,47 +19,48 @@
     }
     & .chart-title-social {
         display: block;
-        margin-left: 40px;
-        font-size: 28px;
-        margin-bottom: -46px !important;
+        font-size: 54px;
+        line-height: 1.2;
+        width: 90%;
+        margin-left: 30px;
+        margin-bottom: 50px !important;
+        text-align: center;
     }
     & .chart-container {
-        min-height: 520px;
-        margin-left: 40px;
-        width: 80%;
+        height: 640px !important;
+        width: 100%;
+        margin-bottom: 60px;
     }
     & .chart-note, & .chart-source  {
         color: $slate-secondary-6;
-        font-size: 16px !important;
-        line-height: 20px;
+        font-size: 28px !important;
+        line-height: 30px;
         text-transform: uppercase;
         letter-spacing: normal;
-        font-weight: 600;
-        margin-top: -270px;
-        margin-right: 50px;
-        @include sm-md-xl {
-            width: 160px;
-            float: right;
-        }
+        font-weight: 500;
+        margin-right: 80px;
+        margin-left: 0px;
+        width: 60% !important;
     }
     & .chart-source {
-        margin-top: -140px;
+        margin-top: 0px;
     }
     & .grow-logo-social {
         display: block;
         float: right;
-        margin-top: -80px;
-        margin-right: 50px;
-        width: 160px;
+        margin-top: -60px;
+        margin-right: 0px;
+        width: 214px;
     }
     & .highcharts-grid-line {
         stroke: white;
+        stroke-width: 3;
     }
     & .highcharts-axis-labels, & .highcharts-legend-item {
         font-weight: 500;
-        font-size: 24px;
+        font-size: 32px;
         & text {
-            font-size: 24px;
+            font-size: 32px;
         }
     }
     & .highcharts-legend-item {
@@ -70,5 +75,14 @@
     & .highcharts-color-1 {
         fill: $slate-secondary-3;
         stroke: $slate-secondary-3;
+    }
+    & .highcharts-tracker-line {
+        stroke-width: 8;
+      }
+    & .highcharts-axis-line {
+        stroke-width: 3;
+    }
+    & .highcharts-series-group {
+        transform: translate(1.5px,0)
     }
 }

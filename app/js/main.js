@@ -77,14 +77,23 @@ function drawHighcharts() {
                     whiteSpace: 'nowrap'
                 }
             },
-            tickLength: 5
+            tickLength: 5,
+            // edits xAxis ticks
+            // dateTimeLabelFormats: {
+            //     week: '%b. %e',
+            // },
+            // tickInterval: 24 * 3600 * 1000 * 7
         },
         yAxis: {
             title: false,
             labels: {
                 useHTML: true,
                 overflow: 'allow'
-            }
+            },
+            // adds commas to thousands
+            // formatter: function () {
+            //     return Highcharts.numberFormat(this.value,0,'.',',');
+            // },
         },
         credits: {
             enabled: false

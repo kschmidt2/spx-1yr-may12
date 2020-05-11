@@ -69,7 +69,11 @@ function drawHighcharts() {
         //     }
         // },
         legend: {
-            enabled: false
+            align: 'right',
+            symbolRadius: 0,
+            verticalAlign: 'top',
+            x: 10,
+            itemMarginTop: -10
         },
         xAxis: {
             labels: {

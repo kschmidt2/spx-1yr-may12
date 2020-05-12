@@ -85,9 +85,9 @@
     fill: $slate-secondary-5;
     // use this to change the axis label
     & span:first-child {
-      &:after {
-        content: "%";
-    }
+    //   &:after {
+    //     content: "%";
+    // }
     }
   }
   
@@ -466,10 +466,20 @@
   }
   
   /* Plot bands and polar pane backgrounds */
-  // .highcharts-plot-band, .highcharts-pane {
-  //   fill: #000000;
-  //   fill-opacity: 0.05;
-  // }
+  .highcharts-plot-band, .highcharts-pane {
+    fill: $slate-secondary-5;
+    fill-opacity: 0.5;
+    &:last-child {
+      fill: $slate-secondary-3;
+    }
+  }
+
+  .highcharts-plot-band-label {
+    font-size: 16px;
+    @include x-small {
+      font-size: 12px;
+    }
+  }
   
   // .highcharts-plot-line {
   //   fill: none;
